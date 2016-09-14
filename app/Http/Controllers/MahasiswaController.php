@@ -17,6 +17,7 @@ class MahasiswaController extends Controller
     {
         $mahasiswas = Mahasiswa::all();
         return view('disp.index', compact('mahasiswas'));
+		
     }
 
     /**
@@ -54,7 +55,8 @@ class MahasiswaController extends Controller
      */
     public function show($id)
     {
-        //
+        $mahasiswas = Mahasiswa::findOrFail($id);
+		return view('include.show', compact('mahasiswas'));
     }
 
     /**

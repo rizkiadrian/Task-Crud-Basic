@@ -24,6 +24,7 @@
 				<form method="POST" action="{{ route('home.destroy', $mahasiswa->id) }}" accept-charset="UTF-8">
 	                <input name="_method" type="hidden" value="DELETE">
 	                <input name="_token" type="hidden" value="{{ csrf_token() }}">
+					<a href="{{ route('home.show', $mahasiswa->id) }}" class="btn btn-warning">SHOW</a> <br/><br/> 
 	              	 <a href="{{ route('home.edit', $mahasiswa->id) }}" class="btn btn-warning">EDIT</a> <br/><br/> 
 	                <input onclick="return confirm('Anda yakin akan menghapus data ?');" type="submit" value="Hapus" class="btn btn-danger"/>
 	            </form>
